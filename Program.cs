@@ -4,6 +4,8 @@
     {
         static void Main(string[] args) // MAIN 
         {
+            void print(string s) => Console.WriteLine(s);
+
             void AnimateTextDisplay(string txt)
             {
                 for (int i = 0; i < txt.Length; i++)
@@ -11,20 +13,20 @@
                     Console.Write(txt[i]);
                     Thread.Sleep(40);
                 }
-                Console.WriteLine();
+                print("");
             }
             Program Test = new Program();
 
             Console.ForegroundColor = ConsoleColor.Green;
             AnimateTextDisplay("DATA STRUCTURES AND ALGORITHMS TESTING GROUND");
-            Console.WriteLine("\n\n");
+            print("\n\n");
 
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.Write("\t");
             AnimateTextDisplay("PLEASE SELECT A CONCEPT TO TEST");
 
-            Console.WriteLine("\n\n");
-            Console.WriteLine("\t\tArrays \t[0]\n\t\tLists \t[1]\n");
+            print("\n\n");
+            print("\t\tArrays \t[0]\n\t\tLists \t[1]\n");
 
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write("Choice: ");
@@ -40,7 +42,7 @@
                     case 0: Test.Arrays(); break;
                     default:
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("THAT IS NOT IN THE CHOICES OR HAS NOT BEEN IMPLEMENTED YET"); break;
+                        print("THAT IS NOT IN THE CHOICES OR HAS NOT BEEN IMPLEMENTED YET"); break;
                 }
             }
             catch (Exception) {/**/}
@@ -49,6 +51,9 @@
 
         void Arrays()
         {
+            Console.ForegroundColor = ConsoleColor.White;
+            void print(string s) => Console.WriteLine(s);
+
             void DisplayArray(Array arr)
             {
                 foreach (var item in arr)
@@ -60,7 +65,6 @@
 
             //basic
             string[] arrayOfNames = new string[] { "Lorem", "Ipsum" };
-
 
             //other
             int[] arrayOfAges = new int[2]; // string[n] where n reserves a memory of that type
@@ -101,10 +105,33 @@
                 // resize to add more
                 Array.Resize(ref arr, arr.Length + 1);
                 arr[arr.Length - 1] = "Bast";
+
                 DisplayArray(arr);
             }
 
-            TestResize();
+            void TestMin()
+            {
+                string[] arr = new string[2] { "4", "2" };
+                string? min = arr.Min();
+
+                print(min);
+            }
+
+            void TestOrder()
+            {
+                int[] numbers = new int[3] { 1, 3, 2 };
+                numbers = numbers.Order().ToArray();
+
+                string[] letters = new string[4] { "abc", "ghi", "dfe", "kjo"};
+                letters = letters.Order().ToArray();
+
+                DisplayArray(numbers);
+                DisplayArray(letters);
+            }
+
+
+            TestOrder();
+
         }
     }
 }

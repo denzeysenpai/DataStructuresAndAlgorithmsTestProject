@@ -1,0 +1,17 @@
+﻿[Notes]
+
+array.CopyTo(arrayNew:array)
+	copies the array to a new array at the end of the last element
+
+array.Append(element:type)
+	adds a new element at the end of an array
+
+array.Resize(newSize:int)
+	resizes the array size to add more elements into the array
+
+array.Min()
+	returns the element with the lowest value in the array
+
+array.Order()
+	arranges the array in order from lowest value to highest and alphabetical order
+	if collection is a string
