@@ -129,8 +129,39 @@
                 DisplayArray(letters);
             }
 
+            void TestAll()
+            {
+                int[] numbers = new int[3] { 1, 3, 2 };
+                string True = "Array elements is greater than or equal to one";
+                string False = "Array elements is less than one";
+                print(numbers.All(x => x >= 1)? True : False);
+            }
 
-            TestOrder();
+            void TestGetLength()
+            {
+                int[] numbers = new int[3] { 1, 3, 2 };
+                print(numbers.GetLength(0).ToString());
+            }
+
+            void TestAverage()
+            {
+                int[] numbers = new int[3] { 1, 3, 2 };
+                print(numbers.Average().ToString());
+            }
+
+            void TestRank()
+            {
+                int[] numbers = new int[3] { 1, 3, 2 };
+                print(numbers.Rank.ToString());
+            }
+
+            void TestCount()
+            {
+                int[] numbers = new int[3] { 1, 3, 2 };
+                print(numbers.Count().ToString());
+            }
+
+            TestCount();
 
         }
     }

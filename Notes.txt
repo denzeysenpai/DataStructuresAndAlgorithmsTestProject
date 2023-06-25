@@ -15,3 +15,15 @@ array.Min()
 array.Order()
 	arranges the array in order from lowest value to highest and alphabetical order
 	if collection is a string
+
+array.All(x => condition)
+	checks if the elements in the array satisfies the given condition
+
+array.GetLength(dimension)
+	gets the number of elements in the array in the given dimension
+
+array.Average()
+	gets the average value of the elements in the array
+
+array.Rank()
+	gets the number of dimensions of an array (a rank is referring to the number of dimensions)
