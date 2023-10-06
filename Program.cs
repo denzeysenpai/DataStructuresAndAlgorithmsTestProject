@@ -107,6 +107,31 @@ namespace DataStructuresAndAlgorithmsTestProject
     {
         static void Main(string[] args) // MAIN 
         {
+            int n = 10;
+            void DivisorGame(int n)
+            {
+                int i = 0;
+                for (i = 0; i < n - 1; i++) 
+                {
+                    Console.WriteLine(i);
+                    Console.WriteLine(n - 1);
+                    Console.WriteLine("--------------\n");
+                }
+                Console.WriteLine(!(i % 2 == 0));
+
+                int m = n;
+                for (i = 0; i < m; i++)
+                {
+                    m = m - 1;
+                    Console.WriteLine(i);
+                    Console.WriteLine(m);
+                    Console.WriteLine("--------------\n");
+                }
+                Console.WriteLine((i % 2 == 0));
+            }
+            DivisorGame(n);
+
+
             //Node head = new Node();
             //Node nodeA = new Node();
             //Node nodeB = new Node();
@@ -123,27 +148,46 @@ namespace DataStructuresAndAlgorithmsTestProject
             //nodeB.Next = nodeC;
 
             //nodeC.Data = 3;
-            //nodeC.Next = nodeD;
+            //nodeC.Next = nodeA;
 
-            LinkedList<int> numbers = new LinkedList<int>();
-            numbers.AddLast(1);
-            numbers.AddLast(2);
-            numbers.AddLast(3);
-            numbers.AddLast(4);
-            numbers.AddLast(5);
+            //bool HasCycle(Node head)
+            //{
+            //    if (head != null && head.Next != null)
+            //    {
+            //        List<Node> cont = new List<Node>();
+            //        Node a = head;
+            //        while (true)
+            //        {
+            //            cont.Add(a);
+            //            a = a.Next;
+            //            if (a == null) break;
+            //            if (cont.Contains(a)) return true;
+            //        }
+            //    }
+            //    bool outPut = false;
+            //    return outPut;
+            //}
+
+            //Console.WriteLine(HasCycle(head));
+            //LinkedList<int> numbers = new LinkedList<int>();
+            //numbers.AddLast(1);
+            //numbers.AddLast(2);
+            //numbers.AddLast(3);
+            //numbers.AddLast(4);
+            //numbers.AddLast(5);
 
 
             //Func<int, bool> func = new Func<int, bool>((x) => x <= 3);
 
 
-            // shorter but takes more memory
-            foreach (int x in numbers.Where((x) => x <= 3)) Console.WriteLine(x);
+            //// shorter but takes more memory
+            //foreach (int x in numbers.Where((x) => x <= 3)) Console.WriteLine(x);
 
-            // takes less memory
-            foreach(int num in numbers)
-            {
-                if (num <= 3) Console.WriteLine(num);
-            }
+            //// takes less memory
+            //foreach(int num in numbers)
+            //{
+            //    if (num <= 3) Console.WriteLine(num);
+            //}
 
             //ChainedList chain = new ChainedList();
             //chain.CreateNewHead(10);
