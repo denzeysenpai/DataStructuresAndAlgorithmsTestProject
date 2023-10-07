@@ -45,7 +45,19 @@ namespace DataStructuresAndAlgorithmsTestProject.Code
                 currentNode = currentNode.Next;
             }
         }
-
+        public bool IsPalindrome()
+        {
+            string first = "";
+            string second = "";
+            var current = Head;
+            while (current != null)
+            {
+                first = first + current.Data.ToString();
+                second = current.Data.ToString() + second;
+                current = current.Next;
+            }
+            return first == second;
+        }
         public void ReverseList()
         {
             Node previous = Head;

@@ -27,16 +27,20 @@ namespace DataStructuresAndAlgorithmsTestProject.Code
             //    if (num <= 3) Console.WriteLine(num);
             //}
 
-            //ChainedList chain = new ChainedList();
-            //chain.CreateNewHead(10);
-            //chain.CreateNewHead(11);
-            //chain.CreateNewHead(12);
+            ChainedList chain = new ChainedList();
+            chain.CreateNewHead(0);
+            chain.CreateNewHead(1);
+            chain.CreateNewHead(2);
+            chain.CreateNewHead(1);
+            chain.CreateNewHead(0);
 
-            //chain.DisplayList();
+            chain.DisplayList();
 
-            //chain.ReverseList();
+            chain.ReverseList();
 
-            //chain.DisplayList();
+            chain.DisplayList();
+
+            Console.WriteLine(chain.IsPalindrome());
 
             //int left = 0;
             //int right = 10;
